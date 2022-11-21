@@ -16,8 +16,7 @@ class Buku extends CI_Controller
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
         $data['buku'] = $this->ModelBuku->getBuku()->result_array();
         $data['kategori'] = $this->ModelBuku->getKategori()->result_array();
-        $this->form_validation->set_rules('judul_buku', 'Judul
-Buku', 'required|min_length[3]', [
+        $this->form_validation->set_rules('judul_buku', 'Judul Buku', 'required|min_length[3]', [
             'required' => 'Judul Buku harus diisi',
             'min_length' => 'Judul buku terlalu pendek'
         ]);
@@ -199,7 +198,7 @@ Penerbit', 'required|min_length[3]', [
             $this->load->view('page/template/header', $data);
             $this->load->view('page/template/sidebar', $data);
             $this->load->view('page/template/topbar', $data);
-            $this->load->view('buku/ubah_buku', $data);
+            $this->load->view('page/buku/ubah_buku', $data);
             $this->load->view('page/template/footer');
         } else {
             if ($this->upload->do_upload('image')) {
@@ -258,7 +257,7 @@ Penerbit', 'required|min_length[3]', [
             $this->load->view('page/template/header', $data);
             $this->load->view('page/template/sidebar', $data);
             $this->load->view('page/template/topbar', $data);
-            $this->load->view('buku/kategori', $data);
+            $this->load->view('page/buku/kategori', $data);
             $this->load->view('page/template/footer');
         } else {
             $data = [

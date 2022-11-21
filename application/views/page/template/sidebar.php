@@ -33,6 +33,11 @@ justify-content-center" href="index.html">
             <i class="fa fa-fw fa book"></i>
             <span class="text-white">Data Anggota</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link pb-0" href="<?= base_url('buku/kategori'); ?>">
+            <i class="fa fa-fw fa book"></i>
+            <span class="text-white">Data Kategori</span></a>
+    </li>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider mt-3">

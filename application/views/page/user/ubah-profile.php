@@ -23,7 +23,7 @@
                         <div class="col-sm-3">
 
                             <img src="<?=
-                                        base_url('assets/img/profile/') . $user['image']; ?>" class="imgthumbnail" alt="">
+                                        base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail" alt="">
                         </div>
                         <div class="col-sm-9">
                             <div class="custom-file">
