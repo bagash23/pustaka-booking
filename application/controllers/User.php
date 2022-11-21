@@ -23,11 +23,11 @@ class User extends CI_Controller
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
         $this->db->where('role_id', 1);
         $data['anggota'] = $this->db->get('user')->result_array();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('page/template/header', $data);
+        $this->load->view('page/template/sidebar', $data);
+        $this->load->view('page/template/topbar', $data);
         $this->load->view('user/anggota', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('page/template/footer');
     }
     public function ubahProfil()
     {
